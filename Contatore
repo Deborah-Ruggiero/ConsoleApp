@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Data una stringa e un carattere, Trovare quante volte quel carattere è contenuto
+            // nella stringa e stampare un messaggio: Il carattere CARATTERE è stato trovato X volte
+
+
+       
+                string name = "the cat is on the table";
+                int count = 0;
+                foreach (char c in name)
+                {
+                    if (c == 't')
+                    {
+                        count++;
+                    }
+                }
+            Console.WriteLine($"Il carattere t è stato trovato {count} volte");
+            }
+        }
+    }
+
+
