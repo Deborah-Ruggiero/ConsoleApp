@@ -1,0 +1,74 @@
+using System;
+
+namespace Calcolatrice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Realizzare un programma che chiede all'utente di inserire
+ due numeri e di scegliere se calcolare la somma,
+ sottrazione, divisione o moltiplicazione.
+ Il programma stampa il risultato e chiede all'utente se
+ vuole eseguire un altro calcolo.
+ Se l'utente sceglie di continuare, il programma chiedere
+ di nuovo all'utente di inserire due numeri, altrimenti
+ esce dal programma. */
+
+            do
+            {
+                Console.WriteLine("Inserire un numero intero");
+                int value1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Inserire un altro numero intero");
+                int value2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Premi: \n[1] per sommare \n[2] per sottrarre \n[3] per moltiplicare n[4] per dividere");
+                int operation = Convert.ToInt32(Console.ReadLine());
+
+                switch (operation)
+                {
+                    case 1:
+                        int sum = value1 + value2;
+                        Console.WriteLine("The result is " + sum);
+
+                        break;
+                    case 2:
+
+                        int sub = value1 - value2;
+                        Console.WriteLine("The result is " + sub);
+                        break;
+                    case 3:
+                        int mult = value1 * value2;
+                        Console.WriteLine("The result is " + mult);
+                        break;
+
+                    case 4:
+                        int div = value1 / value2;
+                        Console.WriteLine("The result is " + div);
+                        break;
+
+                    default:
+                        Console.WriteLine("Scelta non valida");
+                        break;
+                }
+
+                Console.WriteLine("Vuoi esegurie altro calcolo? premere 'y' per continuare, qualsiasi altro carattere per uscire");
+
+
+            } while (Console.ReadLine() == "Y");
+
+
+
+            }
+
+
+            }
+
+    }
+
+
+
+
+
+
+
