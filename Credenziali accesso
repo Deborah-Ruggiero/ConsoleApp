@@ -1,0 +1,46 @@
+using System;
+
+namespace Esercizi
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Scrivere un programma che chiede all'utente di inserire il suo codice di ingresso e la password.
+            //Il programma deve andare avanti finché
+            //l'utente non inserisce codice d'adesione(es.1020304)
+            //e password(es. 1234.)
+            //L'utente può fare max 3 tentativi. Al quarto tentativo, non può più inserire i
+            //dati e compare un messaggio "Account bloccato". Se invece il login ha successo, compare: "Login effettuato".
+
+            int accesso = 1020304;
+            int psw = 1234;
+            int count = 0;
+
+            do { 
+            Console.WriteLine("Inserire codice di ingresso");
+
+            int insuser = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Inserire password");
+            int inspsw = Convert.ToInt32(Console.ReadLine());
+
+                if (accesso == insuser && psw == inspsw)
+                {
+                    Console.WriteLine("Accesso effettuato!");
+                    break;
+
+                }
+                else
+                    count++;
+                    continue;
+
+                } while (count < 3);
+
+
+
+
+
+
+        }
+    }
+}
